@@ -39,8 +39,9 @@ export function ArvionHero() {
         {/* motion used here */}
         <motion.img
           initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.4 }}
           src="https://prelaunch-rotoris.s3.ap-south-1.amazonaws.com/public/assets/products/Arvion/Arvion-text.svg"
           alt="ARVION"
           className="w-[220px] sm:w-[260px] md:w-[300px] lg:w-[340px] h-auto"
@@ -48,8 +49,9 @@ export function ArvionHero() {
 
         <motion.p
           initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: false, amount: 0.4 }}
           className="text-white font-rotoris text-[18px] sm:text-[20px] tracking-tight mt-4 max-w-md leading-none mb-10 md:mb-14"
         >
           For those who value clarity over complexity

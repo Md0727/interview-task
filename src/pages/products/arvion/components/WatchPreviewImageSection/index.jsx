@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from "motion/react";
 
 export default function WatchPreviewImageSection() {
     return (
@@ -41,9 +43,14 @@ export default function WatchPreviewImageSection() {
                             </svg>
                         </div>
 
-                        <h2 className="text-white font-rotoris text-[24px] font-normal leading-[135%] max-w-xl mx-auto">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                            viewport={{ once: false, amount: 0.4 }}
+                            className="text-white font-rotoris text-[24px] font-normal leading-[135%] max-w-xl mx-auto">
                             What you wear on your wrist is your drive of the future.
-                        </h2>
+                        </motion.h2>
                     </div>
 
                     {/* Mobile Image - FIXED */}
@@ -104,9 +111,14 @@ export default function WatchPreviewImageSection() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-white text-center font-rotoris text-[36px] font-semibold leading-[120%] tracking-[-1.08px] max-w-3xl mx-auto px-8 drop-shadow-2xl">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                                viewport={{ once: false, amount: 0.4 }}
+                                className="text-white text-center font-rotoris text-[36px] font-semibold leading-[120%] tracking-[-1.08px] max-w-3xl mx-auto px-8 drop-shadow-2xl">
                                 What you wear on your wrist is your drive of the future.
-                            </h2>
+                            </motion.h2>
                         </div>
 
                     </div>

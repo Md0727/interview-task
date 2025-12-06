@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from "motion/react";
 
 export default function KeyMaterialsSection() {
     const materials = [
@@ -30,17 +32,32 @@ export default function KeyMaterialsSection() {
             <div className="max-w-6xl mx-auto px-4">
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-4xl font-medium text-center">
+                <motion.h2
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                    viewport={{ once: false, amount: 0.4 }}
+                    className="text-3xl md:text-4xl font-medium text-center">
                     Key Materials
-                </h2>
+                </motion.h2>
 
                 {/* Subtitle */}
-                <p className="text-center max-w-[450px] mx-auto mt-2 text-white/70">
+                <motion.p
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                    viewport={{ once: false, amount: 0.4 }}
+                    className="text-center max-w-[450px] mx-auto mt-2 text-white/70">
                     Built from elements that blend simplicity with strength
-                </p>
+                </motion.p>
 
                 {/* Responsive Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12 md:w-[80%] mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                    viewport={{ once: false, amount: 0.4 }}
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12 md:w-[80%] mx-auto">
 
                     {materials.map((m, index) => (
                         <div
@@ -65,7 +82,7 @@ export default function KeyMaterialsSection() {
                         </div>
                     ))}
 
-                </div>
+                </motion.div>
             </div>
         </section>
     );
