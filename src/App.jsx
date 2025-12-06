@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Arvion />} />
+        <Route path="/interview-task" element={<Arvion />} />
       </Routes>
     </BrowserRouter>
   );
